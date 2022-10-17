@@ -1,4 +1,4 @@
-function transform(arr) {
+/* function transform(arr) {
   if (!Array.isArray(arr)) {
     throw new Error("'arr' parameter must be an instance of the Array!");
   } else {
@@ -39,8 +39,13 @@ function transform(arr) {
     console.log(result);
     return result;
   }
+} */
+
+
+//transform([1, 2, 3, '--double-next']);
+
+function calculateDepth(arr) {
+  return Array.isArray(arr) ? 1 + Math.max(0, ...arr.map(a => this.calculateDepth(a))) : 0;
 }
 
-
-transform([1, 2, 3, '--double-next']);
-
+calculateDepth([1, [8, [[]]], [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]], []]]], []]]]]]]]], []]]], []]]]]]]]]], 2, 3, [8, [[[[[[[[[[[[[[]]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575', ['adas', ['dfg', [0]]]]]);
