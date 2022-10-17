@@ -44,8 +44,20 @@
 
 //transform([1, 2, 3, '--double-next']);
 
-function calculateDepth(arr) {
+/* function calculateDepth(arr) {
   return Array.isArray(arr) ? 1 + Math.max(0, ...arr.map(a => this.calculateDepth(a))) : 0;
 }
 
-calculateDepth([1, [8, [[]]], [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]], []]]], []]]]]]]]], []]]], []]]]]]]]]], 2, 3, [8, [[[[[[[[[[[[[[]]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575', ['adas', ['dfg', [0]]]]]);
+calculateDepth([1, [8, [[]]], [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]], []]]], []]]]]]]]], []]]], []]]]]]]]]], 2, 3, [8, [[[[[[[[[[[[[[]]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575', ['adas', ['dfg', [0]]]]]); */
+
+function deleteDigit(n) {
+  n = n.toString();
+  for (let i = 0; i < n; i++) {
+    if (n[i] < n[i + 1]) {
+      console.log(+n.replace(n[i], ''))
+      return n.replace(n[i], '');
+    }
+  }
+}
+
+deleteDigit(1001)
